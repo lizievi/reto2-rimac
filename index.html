@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimac</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <!--         <div include-html="./partials/header.html"></div> -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="./img/logo-rimac.svg" alt="">
+            </div>
+            <div class="header__contacto">
+                <p>&#128222;</p>
+                <a href="">  Llámanos</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__welcome">
+                <div class="main__information">
+                    <p>Nuevo</p>
+                    <p>Seguro <span class="main__section1--secondletter">Vehicular</span> <span class="main__section1--secondletter">Tracking</span></p>
+                    <p>Cuentanos donde le haras seguimiento a tu seguro</p>
+                </div>
+                <div class="main__figure">
+                    <img src="./img/figura-mobile.png" alt="">
+                </div>
+            </div>
+            <div class="main__form">
+                <form class="main__form" action="#">
+                    <h2>Déjanos tus datos</h2>
+                    <div class="main__form--row">
+                        <select name="idperson" id="idperson">
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <input type="number">
+                        </select>
+                    </div>               
+                    <input type="tel">
+                    <input type="text">
+                    <input type="checkbox">
+                    <p>Acepto la <a href="#">Política de Protección de Datos Personales</a> y los <a href="#">Términos y Condiciones</a></p>
+                    <input type="submit" value="Cotízalo">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>&copy 2021 RIMAC Seguros y Reaseguros</footer>
     
 </body>
 </html>
