@@ -44,6 +44,10 @@
     color: #6464FA;
 }
 
+.header__enlace--desktop{
+    display: none;
+}
+
 .main__welcome{
     display: flex;
     padding-top: 40px;
@@ -90,7 +94,7 @@
 .main__form input, select{
     border: 1px #C5CBE0 solid;
     border-radius: 4px;
-    padding: 12px;
+    padding: 18px 12px;
 }
 
 .main__form input::placeholder{
@@ -120,7 +124,7 @@
 
 .main__form h2{
     color: #494F66;
-    font-size: 32px;
+    font-size: 28px;
     padding: 30px 0 ;
 }
 
@@ -140,15 +144,16 @@
     margin: 20px 0;
 }
 
-.main__form .main__form--checkbox[type="checkbox"]{
+.main__form--row .main__form--checkbox[type="checkbox"]{
     appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     cursor: pointer;
     position: relative;
     border-radius: 4px;
     border: 1px #C5CBE0 solid;
     border-radius: 4px;
+    padding: 10px;
 } 
 
 .main__form input[type="checkbox"]:checked{
@@ -159,8 +164,8 @@
 .main__form input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
-  left: 9px;
-  top: 5px;
+  left: 7px;
+  top: 3px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -199,7 +204,102 @@
 }
 
 @media (min-width:700px){
+    .header{
+        position: absolute;
+        margin: auto;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
 
+    .header, .main__welcome{
+        background-color: #ffffff00;
+    }
+
+    .header__question{
+        display: block;
+        color: #676F8F;
+        margin-right: 12px;
+    }
+
+    .header__enlace--mobile{
+        display: none;
+    }
+
+    .header__enlace--desktop{
+        display: block;
+    }
+
+    main{
+        display: flex;
+    }
+
+    .main__welcome{
+        background-image: url(../img/fondo-desktop.svg);
+       height: 100vh;
+    }
+
+    .main__information{
+        width: 75%;
+        padding: 0;
+        padding-left: 40px;
+    }
+
+    .main__welcome--firstimage{
+        display: none;
+    }
+
+    .main__welcome--secondimage{
+        display: block;
+        width: 250px;
+        margin: auto;
+        margin-top: -50px;
+    }
+
+    .main__secondparagraph--secondletter{
+        color: #FF1C44;
+    }
+
+    .main__form{
+        margin-top: 80px;
+    }
+
+    .main__form form{
+        width: 70%;
+    }
+
+    .footer{
+        display: block;
+        color: #A3ABCC;
+        padding-left: 10%;
+        margin-top: -40px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1024px){
+
+    .main__welcome{
+       height: 100vh;
+       width: 40%;
+    }
+
+    .main__form{
+        width: 60%;
+    }
+
+    .main__form form{
+        width: 360px;
+        
+    }
+
+    .main__information{
+        padding-left: 80px;
+        width: 65%;
+    }
+
+
+    
 }
 
 

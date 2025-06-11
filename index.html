@@ -11,49 +11,52 @@
 </head>
 <body>
     <!--         <div include-html="./partials/header.html"></div> -->
-    <header class="header">
-        <div class="header__container container">
-            <img class="header__logo" src="./img/logo-rimac.svg" alt="">
-            <div class="header__contacto">
-                <span class="header__question">¿Tienes alguna duda?</span>
-                <img  src="./img/llamar.png" class="header__icono">     
-                <a class="header__enlace" href="">  Llámanos</a>
+        <header class="header">
+            <div class="header__container container">
+                <img class="header__logo" src="./img/logo-rimac.svg" alt="">
+                <div class="header__contacto">
+                    <span class="header__question">¿Tienes alguna duda?</span>
+                    <img  src="./img/llamar.png" class="header__icono">     
+                    <a class="header__enlace header__enlace--mobile" href="">Llámanos</a>
+                    <a class="header__enlace header__enlace--desktop" href="">(01)411 6001</a>
+                </div>
             </div>
-        </div>
-    </header>
-    
-        <div class="main__welcome">
-            <div class="main__information container">                
-                <p>¡Nuevo!</p>                  
-                <p class="main__secondparagraph">Seguro <span class="main__secondparagraph--secondletter"> Vehicular</span><span class="main__secondparagraph--thirdletter"> Tracking</span></p>
-                <p class="main__thirdparagraph">Cuentanos donde le haras seguimiento a tu seguro</p>
+        </header>
+        <main>
+            <div class="main__welcome">
+                <div class="main__information container">  
+                    <img class="main__welcome--secondimage" src="./img/figura-desktop.svg" alt="">              
+                    <p>¡Nuevo!</p>                  
+                    <p class="main__secondparagraph">Seguro <span class="main__secondparagraph--secondletter"> Vehicular</span><span class="main__secondparagraph--thirdletter"> Tracking</span></p>
+                    <p class="main__thirdparagraph">Cuentanos donde le haras seguimiento a tu seguro</p>
+                </div>
+                <img class="main__welcome--firstimage" src="./img/figura-mobile.png" alt="">
+                
             </div>
-            <img class="main__welcome--firstimage" src="./img/figura-mobile.png" alt="">
-            <img class="main__welcome--secondimage" src="./img/figura-desktop.svg" alt="">
-        </div>
-    
-        <footer class="footer">&copy 2021 RIMAC Seguros y Reaseguros</footer>
+            <div class="main__form">
+                <div class="container">
+                    <form action="#">
+                        <h2>Déjanos tus datos</h2>
+                        <div class="main__form--row">
+                            <select name="idperson" id="idperson" required>
+                                <option value="dni">DNI</option>
+                                <option value="pasaporte">Pasaporte</option>
+                            </select>
+                            <input name="idperson" type="number" placeholder="Nro. de doc" class="main__form--numdoc">
+                        </div>               
+                        <input type="tel" placeholder="Celular" class="main__form--row main__form--tel" required pattern="[9]{1}[0-9]{8}">
+                        <input class="main__form--row main__form--placa" type="text" placeholder="Placa" required>
+                        <div class="main__form--row main__form--check">
+                            <input type="checkbox" class="main__form--checkbox">
+                            <p>Acepto la <a href="#">Política de Protección de Datos Personales</a> y los <a href="#">Términos y Condiciones</a></p>
+                        </div>                  
+                        <input type="submit" value="Cotízalo">
+                    </form>
+                </div>
+            </div>  
+        </main>
 
-        <div class="main__form">
-            <div class="container">
-                <form action="#">
-                    <h2>Déjanos tus datos</h2>
-                    <div class="main__form--row">
-                        <select name="idperson" id="idperson">
-                            <option value="dni">DNI</option>
-                            <option value="pasaporte">Pasaporte</option>
-                        </select>
-                        <input name="idperson" type="number" placeholder="Nro. de doc" class="main__form--numdoc">
-                    </div>               
-                    <input type="tel" placeholder="Celular" class="main__form--row main__form--tel">
-                    <input class="main__form--row main__form--placa" type="text" placeholder="Placa">
-                    <div class="main__form--row main__form--check">
-                        <input type="checkbox" class="main__form--checkbox">
-                        <p>Acepto la <a href="#">Política de Protección de Datos Personales</a> y los <a href="#">Términos y Condiciones</a></p>
-                    </div>                  
-                    <input type="submit" value="Cotízalo">
-                </form>
-            </div>
-        </div>  
+        <footer class="footer">&copy 2021 RIMAC Seguros y Reaseguros</footer>
+    
 </body>
 </html>
