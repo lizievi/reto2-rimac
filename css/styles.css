@@ -1,1 +1,212 @@
 /* Solo imports de tipo: @import "./footer.css"; */
+*{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header, .main__welcome{
+    background-color: #FAFBFF;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.header__logo{
+    width: 140px;
+}
+
+.header__question{
+    display: none;
+}
+
+.header__contacto{
+    display: flex;
+}
+
+.header__icono{
+    width: 32px;
+    padding: 0 6px;
+}
+
+.header__enlace{
+    text-decoration: none;
+    color: #6464FA;
+}
+
+.main__welcome{
+    display: flex;
+    padding-top: 40px;
+}
+
+.main__welcome p{
+    margin: 20px 0;
+    color: #494F66;
+}
+
+.main__welcome--firstimage{
+    position: absolute;
+    right: 0;
+}
+
+.main__welcome--secondimage{
+    display: none;
+}
+
+.main__information{
+    height: 250px;
+    padding-right: 80px;
+}
+.main__secondparagraph{
+    font-size: 28px;
+}
+
+.main__secondparagraph--thirdletter{
+    color: #FF1C44;
+}
+
+.main__thirdparagraph{
+    font-size: 15px;
+    font-family: Roboto, serif;
+    color: #676F8F;
+}
+
+.main__form form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__form input, select{
+    border: 1px #C5CBE0 solid;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.main__form input::placeholder{
+    color: #A9AFD9;
+    font-size: 16px;
+}
+
+.main__form--row{
+    margin-bottom: 16px;
+}
+
+.main__form--row select{
+    border-right: 1px #C5CBE0 solid;
+    border-radius: 4px 0 0 4px;
+    color: #494F66;
+    appearance: none;
+    background-image: url('../img/desglose.png'); 
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px;
+}
+
+.main__form--row input{
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.main__form h2{
+    color: #494F66;
+    font-size: 32px;
+    padding: 30px 0 ;
+}
+
+.main__form--row{
+    display: flex;
+}
+
+.main__form--row select{
+    width: 35%;
+}
+
+.main__form--row input{
+    width: 65%;
+}
+
+.main__form--check{
+    margin: 20px 0;
+}
+
+.main__form .main__form--checkbox[type="checkbox"]{
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    border: 1px #C5CBE0 solid;
+    border-radius: 4px;
+} 
+
+.main__form input[type="checkbox"]:checked{
+    background-color: #09ae17;
+    border-color: #09ae17;
+}
+
+.main__form input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0px 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.main__form p{
+    color: #A3ABCC;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    line-height: 20px;
+    padding: 0 12px;
+    
+}
+
+.main__form p a{
+    color: #676F8F;
+}
+
+.main__form form input[type="submit"]{
+    color: #fff;
+    background-color:#FF1C44;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 10px 0 60px 0;
+}
+
+.footer{
+    display: none;
+}
+
+@media (min-width:700px){
+
+}
+
+
+
+
+
+
+
+
+
