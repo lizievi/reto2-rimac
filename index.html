@@ -1,62 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rimac</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-    <!--         <div include-html="./partials/header.html"></div> -->
-        <header class="header">
-            <div class="header__container container">
-                <img class="header__logo" src="./img/logo-rimac.svg" alt="">
-                <div class="header__contacto">
-                    <span class="header__question">¿Tienes alguna duda?</span>
-                    <img  src="./img/llamar.png" class="header__icono">     
-                    <a class="header__enlace header__enlace--mobile" href="">Llámanos</a>
-                    <a class="header__enlace header__enlace--desktop" href="">(01)411 6001</a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="main__welcome">
-                <div class="main__information container">  
-                    <img class="main__welcome--secondimage" src="./img/figura-desktop.svg" alt="">              
-                    <p>¡Nuevo!</p>                  
-                    <p class="main__secondparagraph">Seguro <span class="main__secondparagraph--secondletter"> Vehicular</span><span class="main__secondparagraph--thirdletter"> Tracking</span></p>
-                    <p class="main__thirdparagraph">Cuentanos donde le haras seguimiento a tu seguro</p>
-                </div>
-                <img class="main__welcome--firstimage" src="./img/figura-mobile.png" alt="">
-                
-            </div>
-            <div class="main__form">
-                <div class="container">
-                    <form action="#">
-                        <h2>Déjanos tus datos</h2>
-                        <div class="main__form--row">
-                            <select name="idperson" id="idperson" required>
-                                <option value="dni">DNI</option>
-                                <option value="pasaporte">Pasaporte</option>
-                            </select>
-                            <input name="idperson" type="number" placeholder="Nro. de doc" class="main__form--numdoc">
-                        </div>               
-                        <input type="tel" placeholder="Celular" class="main__form--row main__form--tel" required pattern="[9]{1}[0-9]{8}">
-                        <input class="main__form--row main__form--placa" type="text" placeholder="Placa" required>
-                        <div class="main__form--row main__form--check">
-                            <input type="checkbox" class="main__form--checkbox">
-                            <p>Acepto la <a href="#">Política de Protección de Datos Personales</a> y los <a href="#">Términos y Condiciones</a></p>
-                        </div>                  
-                        <input type="submit" value="Cotízalo">
-                    </form>
-                </div>
-            </div>  
-        </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-        <footer class="footer">&copy 2021 RIMAC Seguros y Reaseguros</footer>
-    
-</body>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <img class="header__logo" src="./img/logo-rimac.svg" alt="" />
+        <div class="header__contacto">
+          <p class="header__question desktop mr-5">¿Tienes alguna duda?</p>
+          <img src="./img/llamar.png" class="icono-llamar" />
+          <p class="txt-llamar mobile">Llámanos</p>
+          <p class="txt-llamar desktop">(01)411 6001</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__welcome pt-10">
+        <div class="container welcome__container">
+          <img
+            class="main__image--desktop desktop"
+            src="./img/figura-desktop.svg"
+            alt=""
+          />
+          <div class="main__information">
+            <p class="main__firstparagraph">¡NUEVO!</p>
+            <p class="main__secondparagraph">
+              <span class="main__secondparagraph--firstword subtitle"
+                >Seguro</span
+              >
+              <span class="main__secondparagraph--secondword subtitle">
+                Vehicular</span
+              >
+              <span class="main__secondparagraph--thirdword subtitle">
+                Tracking</span
+              >
+            </p>
+            <p class="main__thirdparagraph">
+              Cuentanos donde le haras seguimiento a tu seguro
+            </p>
+          </div>
+
+          <img
+            class="main__image--mobile mobile"
+            src="./img/figura-mobile.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <form class="form-home" action="#">
+        <div class="container form__container">
+
+          <!-- form-home__input -->
+          <h2 class="form-home__h2 subtitle mt-4">Déjanos tus datos</h2>
+          <div class="form-wrapper w-full">
+            <div class="numdoc-form">
+              <select
+                class="element-form w-1/3 sin-borde-derecho"
+                name="idperson"
+                id="idperson"
+                required
+              >
+                <option value="dni">DNI</option>
+                <option value="pasaporte">Pasaporte</option>
+              </select>
+              <input
+                class="element-form w-2/3 sin-borde-izquierdo"
+                name="idperson"
+                type="text"
+                placeholder="Nro. de doc"
+                class="form-element"
+                maxlength="9"
+                minlength="6"
+              />
+            </div>
+            <input
+              type="tel"
+              placeholder="Celular"
+              class="element-form"
+              required
+              pattern="[9]{1}[0-9]{8}"
+            />
+            <input
+              class="element-form"
+              type="text"
+              placeholder="Placa"
+              required
+              pattern="[A-Z]{3}-[0-9]{3}"
+            />
+            <div class="check-politica-container mt-1">
+              <input class="checkbox-small" type="checkbox" />
+              <p class="txt-politica">
+                Acepto la
+                <a href="#" class="enlace-politica"
+                  >Política de Protección de Datos Personales</a
+                >
+                y los
+                <a href="#" class="enlace-politica">Términos y Condiciones</a>
+              </p>
+            </div>
+
+            <button class="button-primary mt-3" type="submit">COTÍZALO</button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer desktop">
+      <div class="container">
+        <p class="txt-footer">&copy 2021 RIMAC Seguros y Reaseguros</p>
+      </div>
+    </footer>
+
+    <!-- <div class="switch-container">
+      <input type="checkbox" id="miSwitch" class="switch-checkbox">
+      <label for="miSwitch" class="switch-label"></label>
+    </div>
+
+    <button type="button" class="button-primary">COTÍZALO</button>
+    <input class="checkbox-small" type="checkbox" />
+    <input type="text" class="element-form" placeholder="placeholder"> -->
+  </body>
 </html>

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.bg-dark-liz{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    width: 50%;
+    margin: auto;
+    font-size: 2rem;
+    box-shadow: 3px 3px 2px rgb(79, 79, 79);
+}

@@ -1,0 +1,17 @@
+:root{
+    --font-primary: "Lato", sans-serif;
+    --font-secondary: "Roboto", serif;
+}
+
+*{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}

@@ -1,112 +1,120 @@
-/* Solo imports de tipo: @import "./footer.css"; */
-*{
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "./common.css";
+@import "./color.css";
+@import "./components.css";
 
-.header, .main__welcome{
-    background-color: #FAFBFF;
-}
-
-.container{
+/* .header{
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: auto;
 }
 
-.header__container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
+.header__logo{
+    width: 92px;
+    height: 16px;
 }
 
-.header__logo{
-    width: 140px;
+.header__contacto{
+    display: flex;
+    align-items: center;
 }
 
 .header__question{
     display: none;
 }
 
-.header__contacto{
-    display: flex;
-}
-
 .header__icono{
-    width: 32px;
-    padding: 0 6px;
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
 }
 
 .header__enlace{
     text-decoration: none;
     color: #6464FA;
+    font-size: 14px;
 }
 
 .header__enlace--desktop{
     display: none;
 }
 
-.main__welcome{
-    display: flex;
-    padding-top: 40px;
-}
-
-.main__welcome p{
-    margin: 20px 0;
-    color: #494F66;
-}
-
-.main__welcome--firstimage{
-    position: absolute;
-    right: 0;
-}
-
-.main__welcome--secondimage{
-    display: none;
-}
-
-.main__information{
-    height: 250px;
-    padding-right: 80px;
-}
-.main__secondparagraph{
-    font-size: 28px;
-}
-
-.main__secondparagraph--thirdletter{
-    color: #FF1C44;
-}
-
-.main__thirdparagraph{
-    font-size: 15px;
-    font-family: Roboto, serif;
-    color: #676F8F;
-}
-
-.main__form form{
-    margin: auto;
+.main{
     display: flex;
     flex-direction: column;
 }
 
-.main__form input, select{
+.main__welcome{
+    display: flex;
+    padding-top: 18px;
+}
+
+.main__information{
+    width: 65%;
+    padding-left: 33px;
+    height: 250px;
+}
+
+.main__information p{
+    margin: 22px 0;
+    color: #494F66;
+}
+
+.main__image--mobile{
+    position: absolute;
+    right: 0;
+}
+
+.main__image--desktop{
+    display: none;
+}
+
+.main__firstparagraph{
+    font-size: 10px;
+}
+
+.main__secondparagraph{
+    font-size: 28px;
+}
+
+.main__secondparagraph--thirdword{
+    color: #FF1C44;
+}
+
+.main__thirdparagraph{
+    font-size: 14px;
+    font-family: Roboto, serif;
+    color: #676F8F;
+    line-height: 24px;
+
+}
+
+.form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.form input, select{
     border: 1px #C5CBE0 solid;
     border-radius: 4px;
     padding: 18px 12px;
+    height: 56px;
 }
 
-.main__form input::placeholder{
+.form select{
+    font-size: 16px;
+}
+
+.form input::placeholder{
     color: #A9AFD9;
     font-size: 16px;
 }
 
-.main__form--row{
-    margin-bottom: 16px;
-}
-
-.main__form--row select{
+.form--row select{
     border-right: 1px #C5CBE0 solid;
     border-radius: 4px 0 0 4px;
     color: #494F66;
@@ -114,112 +122,102 @@
     background-image: url('../img/desglose.png'); 
     background-repeat: no-repeat;
     background-position: right 20px center;
-    background-size: 12px;
+    background-size: 16px;
 }
 
-.main__form--row input{
+.form--row input{
     border-left: none;
     border-radius: 0 4px 4px 0;
 }
 
-.main__form h2{
+.form h2{
     color: #494F66;
-    font-size: 28px;
-    padding: 30px 0 ;
+    font-size: 24px;
+    padding: 18px 0 ;
 }
 
-.main__form--row{
+.form--row{
     display: flex;
 }
 
-.main__form--row select{
+.form--row select{
     width: 35%;
 }
 
-.main__form--row input{
+.form--row input{
     width: 65%;
 }
 
-.main__form--check{
-    margin: 20px 0;
-}
 
-.main__form--row .main__form--checkbox[type="checkbox"]{
-    appearance: none;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 4px;
-    border: 1px #C5CBE0 solid;
-    border-radius: 4px;
-    padding: 10px;
-} 
 
-.main__form input[type="checkbox"]:checked{
-    background-color: #09ae17;
-    border-color: #09ae17;
-}
 
-.main__form input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0px 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.main__form p{
+.form p{
     color: #A3ABCC;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     text-align: left;
     line-height: 20px;
     padding: 0 12px;
+    margin: 0;
     
 }
 
-.main__form p a{
+.form p a{
     color: #676F8F;
 }
 
-.main__form form input[type="submit"]{
-    color: #fff;
-    background-color:#FF1C44;
-    text-transform: uppercase;
-    letter-spacing:1.5px;
-    border-radius: 8px;
-    padding: 20px;
-    font-weight: 500;
-    font-size: 16px;
-    margin: 10px 0 60px 0;
-}
+
 
 .footer{
     display: none;
 }
 
-@media (min-width:700px){
-    .header{
-        position: absolute;
-        margin: auto;
-        width: 100%;
-        margin: auto;
-        margin-top: 20px;
+
+@media (min-width:540px) and (min-height:720px){
+    .form{
+        width: 50%;
     }
 
-    .header, .main__welcome{
-        background-color: #ffffff00;
+    .main__information{
+        padding-left: 16%;
+    }
+
+}
+
+@media (min-width: 820px){
+    .main__information{
+        padding-left: 26%;
+    }
+}
+
+@media (min-width: 1024px) and (max-height: 800px){
+ 
+    body{
+        background: linear-gradient(to bottom, #fff 324px, #fff 0%);
+        background-image: url(../img/fondo-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 48%;
+        object-fit: cover;
+    }
+
+    .header{
+        height: 64px;
+    }
+
+    .header__logo{
+        width: 99px;
     }
 
     .header__question{
         display: block;
+        font-size: 12px;
+        margin: 0 10px;
         color: #676F8F;
-        margin-right: 12px;
+    }
+
+    .header__icono{
+        width: 20px;
+        height: 20px;
     }
 
     .header__enlace--mobile{
@@ -230,83 +228,312 @@
         display: block;
     }
 
-    main{
-        display: flex;
+    .main{
+        flex-direction: row;
+        height: 85vh;
     }
 
     .main__welcome{
-        background-image: url(../img/fondo-desktop.svg);
-       height: 100vh;
+        width: 40%;
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .main__information p{
+        margin: 16px 0;
     }
 
     .main__information{
-        width: 75%;
-        padding: 0;
-        padding-left: 40px;
+        width: 85%;
+        padding-left: 0;
     }
 
-    .main__welcome--firstimage{
+    .main__image--mobile{
         display: none;
     }
 
-    .main__welcome--secondimage{
+    .main__image--desktop{
         display: block;
-        width: 250px;
-        margin: auto;
-        margin-top: -50px;
+        width: 90.6%;
+        height: 70.8%;
     }
 
-    .main__secondparagraph--secondletter{
+    .main__firstparagraph{
+        font-size: 14px;
+    }
+
+    .main__secondparagraph{
+        font-size: 36px;
+    }
+
+    .main__secondparagraph--secondword{
         color: #FF1C44;
     }
 
-    .main__form{
-        margin-top: 80px;
+    .main__secondparagraph--secondword{
+        color: #FF1C44;
     }
 
-    .main__form form{
-        width: 70%;
+    .form{
+        width: 288px;
+        margin-left: 18%;
     }
 
     .footer{
         display: block;
         color: #A3ABCC;
         padding-left: 10%;
-        margin-top: -40px;
         font-size: 12px;
+        margin-bottom: 1%;
+
     }
 }
 
-@media (min-width: 1024px){
-
-    .main__welcome{
-       height: 100vh;
-       width: 40%;
-    }
-
-    .main__form{
-        width: 60%;
-    }
-
-    .main__form form{
-        width: 360px;
-        
-    }
-
+@media (min-width: 1280px){
     .main__information{
-        padding-left: 80px;
-        width: 65%;
+        width: 70%;
+        padding-left: 0;
     }
 
+    .main__image--desktop{
+        width: 85%;
+        padding-left: 7%;
+        height: 80%;
+    }
 
-    
+} */
+.desktop {
+  display: none;
 }
 
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
 
+/* ------------------
+HEADER ---------------
+----------------------*/
 
+.header {
+  position: fixed;
+  width: 100%;
+  grid-area: header;
+  height: 56px;
+  align-content: center;
+  background-color: var(--color-background);
+}
 
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.header__contacto {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
 
+.header__question {
+  color: var(--color-secondary);
+  font-size: 12px;
+}
 
+.header__logo {
+  width: 92px;
+  height: 16px;
+}
 
+.icono-llamar {
+  width: 24px;
+  height: 24px;
+}
 
+/* ------------------
+MAIN ---------------*/
+/* ------------------
+MAIN WELCOME ---------------*/
+.main {
+  grid-area: main;
+}
+
+.main__welcome {
+  background-color: var(--color-background);
+}
+
+.welcome__container {
+  display: flex;
+  height: 308px;
+}
+
+.main__information {
+  width: 72%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.main__firstparagraph {
+  font-size: 10px;
+  color: var(--color-secondary-dark);
+  font-weight: 700;
+  letter-spacing: 0.8;
+}
+
+.main__secondparagraph--thirdword {
+  color: red;
+}
+
+.main__thirdparagraph {
+  font-size: 14px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+.main__image--mobile {
+  position: absolute;
+  right: 0;
+  top: 98px;
+}
+
+/* ------------------
+MAIN FORM ---------------
+-------------------------*/
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-home__h2 {
+  font-size: 24px;
+}
+
+.numdoc-form select {
+  border-right: 1px #c5cbe0 solid;
+  border-radius: 4px 0 0 4px;
+  color: #494f66;
+  appearance: none;
+  background-image: url("../img/desglose-rojo.png");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px;
+}
+
+.check-politica-container {
+  display: flex;
+  gap: 18px;
+}
+
+.txt-politica {
+  font-size: 12px;
+  color: var(--color-secondary-light);
+}
+
+.enlace-politica {
+  font-size: inherit;
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (1024px < width) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  /* ------------------
+    HEADER ---------------
+    ------------------*/
+  .header {
+    background-color: var(--color-transparente);
+  }
+
+  /* ------------------
+    MAIN ---------------*/
+  /* ------------------
+    MAIN WELCOME ---------------*/
+  .main__welcome {
+    background-color: var(--color-transparente);
+    background-image: url(../img/fondo-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main {
+    display: flex;
+  }
+
+  .main__welcome {
+    width: 40%;
+    height: 100vh;
+  }
+
+  .welcome__container {
+    flex-direction: column;
+    width: 60%;
+    margin-left: 28%;
+    padding-top: 50px;
+  }
+
+  .main__information {
+    width: 100%;
+  }
+
+  .main__firstparagraph {
+    font-size: 14px;
+  }
+
+  .main__secondparagraph span {
+    font-size: 36px;
+  }
+
+  .main__secondparagraph--secondword {
+    color: var(--color-primary);
+  }
+
+  .form-home {
+    width: 60%;
+  }
+
+  /* ------------------
+    FORM ---------------
+    ---------------*/
+
+  .form__container {
+    width: 50%;
+    margin-left: 15%;
+    margin-top: 5%;
+    padding-top: 50px;
+  }
+
+  .button-primary {
+    width: fit-content;
+  }
+
+  /* ------------------
+    FOOTER ---------------
+    ---------------*/
+  .footer {
+    margin-top: -40px;
+  }
+
+  .txt-footer {
+    color: var(--color-secondary-light);
+    font-size: 12px;
+  }
+}
