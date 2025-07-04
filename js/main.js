@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Manejo de la funcionalidad expandir/colapsar
   // Ahora seleccionamos ambos tipos de botones de toggle
+  // PARA LAS OTRAS VISTAS, NO PARA EL HOME
   const toggleButtons = document.querySelectorAll('.toggle-content-btn, .toggle-arrow-btn');
 
   toggleButtons.forEach(button => {

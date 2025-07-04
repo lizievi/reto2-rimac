@@ -60,59 +60,67 @@
           />
         </div>
       </div>
-
-      <form class="form-home" action="#">
+      <form id="formulario-cotizacion" class="form-home" action="#">
         <div class="container form__container">
-
           <!-- form-home__input -->
           <h2 class="form-home__h2 subtitle mt-4">Déjanos tus datos</h2>
           <div class="form-wrapper w-full">
-            <div class="numdoc-form">
-              <select
-                class="element-form w-1/3 sin-borde-derecho"
-                name="idperson"
-                id="idperson"
-                required
-              >
-                <option value="dni">DNI</option>
-                <option value="pasaporte">Pasaporte</option>
-              </select>
+            <div class="form-group-wrapper">
+              <div class="numdoc-form" id="numdoc-form">
+                <select
+                  class="element-form w-1/3 sin-borde-derecho"
+                  name="idperson"
+                  id="tipo-documento"
+                >
+                  <option value="dni">DNI</option>
+                  <option value="pasaporte">Pasaporte</option>
+                </select>
+                <input
+                  id="numero-documento"
+                  class="element-form w-2/3 sin-borde-izquierdo"
+                  name="idperson"
+                  type="text"
+                  placeholder="Nro. de doc"
+                  class="form-element"
+                />
+              </div>
+            </div>
+            <div class="form-group-wrapper">
               <input
-                class="element-form w-2/3 sin-borde-izquierdo"
-                name="idperson"
-                type="text"
-                placeholder="Nro. de doc"
-                class="form-element"
-                maxlength="9"
-                minlength="6"
+                id="celular"
+                type="tel"
+                placeholder="Celular"
+                class="element-form w-full"
               />
             </div>
-            <input
-              type="tel"
-              placeholder="Celular"
-              class="element-form"
-              required
-              pattern="[9]{1}[0-9]{8}"
-            />
-            <input
-              class="element-form"
-              type="text"
-              placeholder="Placa"
-              required
-              pattern="[A-Z]{3}-[0-9]{3}"
-            />
-            <div class="check-politica-container mt-1">
-              <input class="checkbox-small" type="checkbox" />
-              <p class="txt-politica">
-                Acepto la
-                <a href="#" class="enlace-politica"
-                  >Política de Protección de Datos Personales</a
-                >
-                y los
-                <a href="#" class="enlace-politica">Términos y Condiciones</a>
-              </p>
+            <div class="form-group-wrapper">
+              <input
+                id="placa"
+                class="element-form w-full"
+                type="text"
+                placeholder="Placa"
+              />
             </div>
-
+            <div class="form-group-wrapper">
+              <div
+                class="check-politica-container mt-1"
+                id="check-politica-container"
+              >
+                <input
+                  id="politicaYTerminos"
+                  class="checkbox-small"
+                  type="checkbox"
+                />
+                <label for="politicaYTerminos" class="txt-politica">
+                  Acepto la
+                  <a href="#" class="enlace-politica"
+                    >Política de Protección de Datos Personales</a
+                  >
+                  y los
+                  <a href="#" class="enlace-politica">Términos y Condiciones</a>
+                </label>
+              </div>
+            </div>
             <button class="button-primary mt-3" type="submit">COTÍZALO</button>
           </div>
         </div>
@@ -124,14 +132,6 @@
         <p class="txt-footer">&copy 2021 RIMAC Seguros y Reaseguros</p>
       </div>
     </footer>
-
-    <!-- <div class="switch-container">
-      <input type="checkbox" id="miSwitch" class="switch-checkbox">
-      <label for="miSwitch" class="switch-label"></label>
-    </div>
-
-    <button type="button" class="button-primary">COTÍZALO</button>
-    <input class="checkbox-small" type="checkbox" />
-    <input type="text" class="element-form" placeholder="placeholder"> -->
+    <script src="./js/validacion.js"></script>
   </body>
 </html>
