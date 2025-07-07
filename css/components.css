@@ -1,45 +1,44 @@
 @import "./common.css";
 @import "./color.css";
 
-.container{
-    width: 82%;
-    margin: auto;
+.container {
+  width: 82%;
+  margin: auto;
 }
 
-.subtitle{
-    font-size: 28px;
-    color: var(--color-secondary-dark);
-    letter-spacing: -.6px;
+.subtitle {
+  font-size: 28px;
+  color: var(--color-secondary-dark);
+  letter-spacing: -0.6px;
 }
 
-.button-primary{
-    color: white;
-    background-color: var(--color-primary);
-    padding: 20px 60px;
-    border-radius: 8px;
-    transition: all .3s;
-    font-weight: 700;
-    letter-spacing: .8px;
-    font-size: 14px;
+.button-primary {
+  color: white;
+  background-color: var(--color-primary);
+  padding: 20px 60px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 14px;
 }
 
-.checkbox-small{
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 4px;
-    border: 1px #C5CBE0 solid;
-    border-radius: 4px;
-    padding: 10px;
-} 
-
-.checkbox-small:checked{
-    background-color: #09ae17;
-    border-color: #09ae17;
+.checkbox-small {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  border: 1px #c5cbe0 solid;
+  border-radius: 4px;
+  padding: 10px;
 }
 
+.checkbox-small:checked {
+  background-color: #09ae17;
+  border-color: #09ae17;
+}
 
 .checkbox-small:checked::after {
   content: "";
@@ -53,18 +52,18 @@
   transform: rotate(45deg);
 }
 
-.form-wrapper{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
+.form-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
 }
 
 /* Utility */
-.w-full{
-    width: 100%;
+.w-full {
+  width: 100%;
 }
 
-.switch-container{
+/* .switch-container{
     display: flex;
 }
 
@@ -102,49 +101,45 @@
 .switch-checkbox:checked + .switch-label::after {
   left: calc(100% - 1px); 
   transform: translateX(-100%); 
-}
+} */
 
 /* clase que defina el elemento, field-input */
 
-.element-form{
-
-    /* min-width: 288px;  */
-    /* max-width: 350px; */
-    height: 56px;
-    border: 1px solid var(--color-borde);
-    border-radius: 4px;
-    padding: 16px;
-    line-height: 24px;
-    color: var(--color-secondary-dark);
+.element-form {
+  /* min-width: 288px;  */
+  /* max-width: 350px; */
+  height: 56px;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  padding: 16px;
+  line-height: 24px;
+  color: var(--color-secondary-dark);
 }
 
-.element-form::placeholder{
-    color: #A9AFD9;
-    font-size: 16px;
+.element-form::placeholder {
+  color: #a9afd9;
+  font-size: 16px;
 }
 
-.element-form:focus{
-    outline: 1px solid var(--color-secondary-dark);
+.numdoc-form {
+  display: flex;
 }
 
-.numdoc-form{
-    display: flex;
+.no-right-border {
+  border-radius: 4px 0 0 4px;
 }
 
-.sin-borde-derecho{
-    border-radius: 4px 0 0 4px; 
+.no-left-border {
+  border-radius: 0 4px 4px 0;
 }
 
-.sin-borde-izquierdo{
-    border-radius: 0 4px 4px 0; 
+.txt-call {
+  color: var(--color-tertiary-ligth);
+  font-size: 14px;
 }
 
-.txt-llamar{
-    color: var(--color-tertiary-ligth);
-    font-size: 14px;
+.desktop {
+  display: none;
 }
 
-.desktop{
-    display: none;
-}
 

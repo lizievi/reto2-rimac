@@ -18,11 +18,11 @@
     <header class="header">
       <div class="container header__container">
         <img class="header__logo" src="./img/logo-rimac.svg" alt="" />
-        <div class="header__contacto">
+        <div class="header__contact">
           <p class="header__question desktop mr-5">¿Tienes alguna duda?</p>
-          <img src="./img/llamar.png" class="icono-llamar" />
-          <p class="txt-llamar mobile">Llámanos</p>
-          <p class="txt-llamar desktop">(01)411 6001</p>
+          <img src="./img/llamar.png" class="icono-call" />
+          <p class="txt-call mobile">Llámanos</p>
+          <p class="txt-call desktop">(01)411 6001</p>
         </div>
       </div>
     </header>
@@ -60,64 +60,63 @@
           />
         </div>
       </div>
-      <form id="formulario-cotizacion" class="form-home" action="#">
+      <form id="form-price" class="form-price" action="#">
         <div class="container form__container">
-          <!-- form-home__input -->
-          <h2 class="form-home__h2 subtitle mt-4">Déjanos tus datos</h2>
-          <div class="form-wrapper w-full">
-            <div class="form-group-wrapper">
+          <!-- form-price__input -->
+          <h2 class="form-price__h2 subtitle mt-4">Déjanos tus datos</h2>
+          <div class="form-wrapper w-full">            
               <div class="numdoc-form" id="numdoc-form">
                 <select
-                  class="element-form w-1/3 sin-borde-derecho"
+                  class="element-form w-1/3 no-right-border"
                   name="idperson"
-                  id="tipo-documento"
+                  id="type-document"
                 >
                   <option value="dni">DNI</option>
                   <option value="pasaporte">Pasaporte</option>
                 </select>
-                <input
-                  id="numero-documento"
-                  class="element-form w-2/3 sin-borde-izquierdo"
-                  name="idperson"
-                  type="text"
-                  placeholder="Nro. de doc"
-                  class="form-element"
-                />
-              </div>
-            </div>
-            <div class="form-group-wrapper">
+                <div class="error-container w-2/3">
+                  <input
+                    id="document-number"
+                    class="element-form no-left-border w-full"
+                    name="idperson"
+                    type="text"
+                    placeholder="Nro. de doc"
+                  />
+                </div>
+              </div>            
+            <div class="error-container">
               <input
-                id="celular"
+                id="phone"
                 type="tel"
                 placeholder="Celular"
                 class="element-form w-full"
               />
             </div>
-            <div class="form-group-wrapper">
+            <div class="error-container">
               <input
-                id="placa"
+                id="plate"
                 class="element-form w-full"
                 type="text"
                 placeholder="Placa"
               />
             </div>
-            <div class="form-group-wrapper">
+            <div class="error-container">
               <div
-                class="check-politica-container mt-1"
-                id="check-politica-container"
+                class="policy-container mt-1"
+                id="policy-container"
               >
                 <input
-                  id="politicaYTerminos"
+                  id="policy-content"
                   class="checkbox-small"
                   type="checkbox"
                 />
-                <label for="politicaYTerminos" class="txt-politica">
+                <label for="policy-content" class="txt-policy">
                   Acepto la
-                  <a href="#" class="enlace-politica"
+                  <a href="#" class="policy-link"
                     >Política de Protección de Datos Personales</a
                   >
                   y los
-                  <a href="#" class="enlace-politica">Términos y Condiciones</a>
+                  <a href="#" class="policy-link">Términos y Condiciones</a>
                 </label>
               </div>
             </div>
@@ -132,6 +131,7 @@
         <p class="txt-footer">&copy 2021 RIMAC Seguros y Reaseguros</p>
       </div>
     </footer>
+    <!-- <script src="./js/fetch.js"></script> -->
     <script src="./js/validacion.js"></script>
   </body>
 </html>
