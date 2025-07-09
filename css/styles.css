@@ -151,7 +151,7 @@ MAIN FORM ---------------
 
 
 /* /////////////////////////////////// */
-.error-message  {
+.error-message-container  {
   color: var(--color-primary);
   font-size: 0.85em;
 
